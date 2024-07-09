@@ -1,0 +1,234 @@
+.banner {
+  position: relative;
+}
+.banner .pic img {
+  min-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner .controlBox {
+  left: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  z-index: 20;
+}
+.banner .controlBox .slick-arrow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  line-height: 1;
+  font-weight: 500;
+  padding: 0 30px;
+  color: #FFF;
+  background: none;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .banner .controlBox .slick-arrow {
+    padding: 0 20px;
+  }
+}
+.banner .controlBox .slick-arrow::after {
+  content: "";
+  -webkit-mask: url("../images/icon/icon_more.svg") center no-repeat;
+          mask: url("../images/icon/icon_more.svg") center no-repeat;
+  -webkit-mask-position: right;
+          mask-position: right;
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  background: #FFF;
+  width: 118px;
+  height: 11px;
+  display: block;
+  flex-shrink: 0;
+  margin: 0 0 0 10px;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .banner .controlBox .slick-arrow::after {
+    width: 40px;
+    height: 5px;
+  }
+}
+.banner .controlBox .slick-arrow.slick-prev {
+  border-right: #8D969C 1px solid;
+}
+.banner .controlBox .slick-arrow.slick-prev::after {
+  order: -1;
+  margin: 0 10px 0 0;
+  transform: scaleX(-1);
+}
+.banner .controlBox .slick-arrow:hover {
+  color: #C61D06;
+}
+.banner .controlBox .slick-arrow:hover::after {
+  background: #C61D06;
+}
+
+.application {
+  overflow: hidden;
+}
+.application .blockTitle {
+  width: 28%;
+  margin-bottom: 5%;
+  line-height: 1.2;
+  font-size: 2.625rem;
+}
+@media screen and (max-width: 1000px) {
+  .application .blockTitle {
+    font-size: 1.875rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .application .blockTitle {
+    font-size: 1.75rem;
+    width: 100%;
+  }
+}
+.application .content {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .application .content {
+    flex-direction: column;
+  }
+}
+.application .content .description {
+  width: 72%;
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 1000px) {
+  .application .content .description {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .application .content .description {
+    width: 100%;
+  }
+}
+.application .products {
+  padding-top: 10%;
+  margin-top: 10%;
+  position: relative;
+  border-top: #DDDDDD 1px solid;
+}
+.application .products .blockTitle {
+  width: 100%;
+}
+.application .products .swiper {
+  overflow: visible;
+}
+.application .products .swiper-slide {
+  padding: 30px 0;
+}
+.application .products .swiper-slide a {
+  background: #E2E1E6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 30px;
+  position: relative;
+  border: 1px solid #E2E1E6;
+  height: 100%;
+  box-shadow: 0 0 30px 0px rgba(247, 155, 63, 0);
+}
+.application .products .swiper-slide a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  aspect-ratio: 1;
+  bottom: 0;
+  border-radius: 50%;
+  transform: scale(1.4);
+  background: radial-gradient(ellipse at center, rgb(255, 255, 255) 10%, rgba(255, 255, 255, 0) 60%);
+}
+.application .products .swiper-slide .pic {
+  position: relative;
+  z-index: 5;
+}
+.application .products .swiper-slide .pic img {
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+}
+.application .products .swiper-slide .title {
+  color: #000;
+  font-size: 1.75rem;
+  font-weight: normal;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .application .products .swiper-slide .title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .application .products .swiper-slide .title {
+    font-size: 1.25rem;
+  }
+}
+.application .products .swiper-slide .description {
+  color: #666666;
+  font-size: 1rem;
+}
+.application .products .swiper-slide:hover a {
+  border-color: #C61D06;
+  background: #FFF;
+  box-shadow: 0 0 30px 0px rgba(247, 155, 63, 0.5);
+}
+.application .products .swiper-horizontal > .swiper-scrollbar,
+.application .products .swiper-scrollbar.swiper-scrollbar-horizontal {
+  left: 0;
+  width: 100%;
+}
+.application .products .arrow {
+  width: 124px;
+  aspect-ratio: 124/177;
+  padding: 0;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: none;
+  z-index: 3;
+}
+@media screen and (max-width: 1000px) {
+  .application .products .arrow {
+    width: 50px;
+  }
+}
+.application .products .arrow button {
+  position: absolute;
+  inset: 0;
+  background: none;
+  border: none;
+  transform: scale(0) translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.application .products .arrow button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  display: block;
+  -webkit-mask: url("../images/icon/icon_arrow.svg") center no-repeat;
+          mask: url("../images/icon/icon_arrow.svg") center no-repeat;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  background: #8D969C;
+  opacity: 0.3;
+}
+.application .products .arrow.next button::before {
+  transform: scaleX(-1);
+}
+.application .products .arrow.active button {
+  pointer-events: unset;
+  transform: scale(1) translate(-50%, -50%);
+}/*# sourceMappingURL=application.css.map */

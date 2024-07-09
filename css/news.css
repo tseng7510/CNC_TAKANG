@@ -1,0 +1,467 @@
+.newsList section .listBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+.newsList section .listBox .item {
+  width: 33.3333333333%;
+  position: relative;
+  border: #DDDDDD 1px solid;
+  margin: -1px 0 0 -1px;
+  isolation: isolate;
+}
+@media screen and (max-width: 1000px) {
+  .newsList section .listBox .item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .newsList section .listBox .item {
+    width: 100%;
+  }
+}
+.newsList section .listBox .item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgb(45, 47, 145) 0%, rgb(80, 82, 173) 100%);
+  display: block;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.newsList section .listBox .item:hover::before {
+  opacity: 1;
+}
+.newsList section .listBox .item:hover a {
+  transform: translateY(-40px);
+}
+.newsList section .listBox .item:hover .info .title {
+  color: #FFF;
+}
+.newsList section .listBox .item:hover .info .description {
+  color: #D7D8EB;
+}
+.newsList section .listBox .item:hover .more {
+  display: block;
+}
+.newsList section .listBox a {
+  height: 100%;
+  padding: 80px 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+.newsList section .pic {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+}
+.newsList section .info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.newsList section .info .title {
+  color: #000;
+  font-weight: 700;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  font-size: 1.75rem;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .newsList section .info .title {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .newsList section .info .title {
+    font-size: 1.25rem;
+  }
+}
+.newsList section .info .description {
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .newsList section .info .description {
+    font-size: 1rem;
+  }
+}
+.newsList section .more {
+  font-size: 0.9375rem;
+  color: #ECECF7;
+  padding: 10px 30px;
+  border: #ECECF7 1px solid;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translateX(-50%);
+}
+
+.newsDetail .mainBox {
+  background: url("../images/in/news_bg.jpg") center bottom no-repeat;
+  background-size: cover;
+}
+.newsDetail section .container {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .newsDetail section .container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+  }
+}
+.newsDetail section .container .contentBox {
+  order: 1;
+}
+@media screen and (min-width: 768px) {
+  .newsDetail section .container .contentBox {
+    max-width: 860px;
+    width: 70%;
+    order: 0;
+  }
+}
+.newsDetail section .container .contentBox .title {
+  font-size: 2.25rem;
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1000px) {
+  .newsDetail section .container .contentBox .title {
+    font-size: 1.875rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .newsDetail section .container .contentBox .title {
+    font-size: 1.5rem;
+  }
+}
+.newsDetail section .container .pic {
+  order: 0;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .newsDetail section .container .pic {
+    position: sticky;
+    top: 80px;
+    margin-bottom: 0;
+    order: 2;
+  }
+}
+
+.videoList section .listBox {
+  --gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+.videoList section .listBox .item {
+  width: calc((100% - var(--gap) * 2) / 3);
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+  .videoList section .listBox .item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .videoList section .listBox .item {
+    width: 100%;
+  }
+}
+.videoList section .listBox .item a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.videoList section .listBox .item .pic {
+  position: relative;
+  isolation: isolate;
+}
+.videoList section .listBox .item .pic::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: url("../images/in/video_top.png") center no-repeat;
+  display: block;
+}
+.videoList section .listBox .item .info {
+  margin: -20px 40px 0;
+  background: #FFF;
+  z-index: 9;
+  position: relative;
+  padding: 30px 35px 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  flex-grow: 1;
+}
+@media screen and (max-width: 1000px) {
+  .videoList section .listBox .item .info {
+    margin: -20px 20px 0;
+  }
+}
+.videoList section .listBox .item .info .title {
+  line-height: 1.2;
+}
+.videoList section .listBox .item .info .more {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 10px 20px;
+  color: #2D2F91;
+  background: #EDEDF7;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.videoList section .listBox .item .info .more::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: block;
+  -webkit-mask: url("../images/icon/icon_more.svg") center no-repeat;
+          mask: url("../images/icon/icon_more.svg") center no-repeat;
+  background: #2D2F91;
+  opacity: 0.5;
+  margin: 0 0 0 10px;
+  transition: all 0.3s ease;
+}
+.videoList section .listBox .item:hover .more {
+  color: #FFF;
+  background: #2D2F91;
+}
+.videoList section .listBox .item:hover .more::after {
+  background: #FFF;
+}
+.videoList section .lightBox .videoBox {
+  width: 100%;
+  max-width: 600px;
+}
+.videoList section .lightBox iframe {
+  width: 100%;
+}
+
+.brochureList .mainBox {
+  padding-bottom: 0;
+}
+.brochureList .mainBox::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  display: block;
+  left: 0%;
+  right: 0;
+  top: 60%;
+  bottom: 0;
+  background: #EDEDF7;
+}
+.brochureList section .contentBox {
+  isolation: isolate;
+}
+.brochureList section .content {
+  width: 100%;
+  padding-bottom: 150px;
+}
+@media screen and (min-width: 1001px) {
+  .brochureList section .content {
+    padding: 3% 0 150px;
+  }
+}
+.brochureList section .tableUse {
+  display: flex;
+}
+.brochureList section .listBox {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  flex-shrink: 0;
+}
+.brochureList section .listBox .slick-slide > div {
+  padding: 20px;
+}
+.brochureList section .listBox .item {
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  isolation: isolate;
+  background: #FFF;
+}
+.brochureList section .listBox .item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgb(45, 47, 145) 0%, rgb(80, 82, 173) 100%);
+  display: block;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.brochureList section .listBox .item a {
+  display: block;
+  padding: 30px;
+}
+.brochureList section .listBox .item:hover::before {
+  opacity: 1;
+}
+.brochureList section .listBox .item:hover .pic::before, .brochureList section .listBox .item:hover .pic::after {
+  opacity: 1;
+}
+.brochureList section .listBox .item:hover .pic img {
+  opacity: 0.6;
+}
+.brochureList section .listBox .item:hover .title {
+  border-top: rgba(255, 255, 255, 0.3) 1px solid;
+  color: #FFF;
+}
+.brochureList section .listBox .pic {
+  position: relative;
+  margin-bottom: 25px;
+}
+.brochureList section .listBox .pic::before {
+  content: "";
+  width: 30px;
+  aspect-ratio: 1;
+  display: block;
+  -webkit-mask: url("../images/icon/icon_download.svg") center no-repeat;
+          mask: url("../images/icon/icon_download.svg") center no-repeat;
+  background: #FFF;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.brochureList section .listBox .pic::after {
+  content: "";
+  width: 30%;
+  aspect-ratio: 1;
+  background: rgba(45, 47, 145, 0.9);
+  border-radius: 50%;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+.brochureList section .listBox .pic img {
+  transition: all 0.3s ease;
+}
+.brochureList section .listBox .title {
+  border-top: rgba(80, 82, 173, 0.3) 1px solid;
+  padding-top: 25px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .brochureList section .listBox .title {
+    font-size: 1.375rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .brochureList section .listBox .title {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 1001px) {
+  .brochureList section .tabBox {
+    display: flex;
+  }
+}
+.brochureList section .tabBox aside {
+  background: #FFF;
+  position: relative;
+  z-index: 9;
+}
+@media screen and (min-width: 1001px) {
+  .brochureList section .tabBox aside {
+    width: 310px;
+    border-right: #000000 1px solid;
+    padding: 5% 4.5% 0 40px;
+  }
+}
+.brochureList section .tabBox aside > button {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  background: #2C2D91;
+  display: none;
+  line-height: 1.75;
+  cursor: pointer;
+}
+@media screen and (max-width: 1000px) {
+  .brochureList section .tabBox aside > button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.brochureList section .tabBox aside > button::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  transform: rotate(45deg);
+  border-width: 0 2px 2px 0;
+}
+.brochureList section .tabBox aside ul {
+  display: none;
+  border: #DDDDDD 1px solid;
+}
+@media screen and (min-width: 1001px) {
+  .brochureList section .tabBox aside ul {
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+}
+.brochureList section .tabBox aside ul li button {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #000;
+  background: none;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+@media screen and (min-width: 1001px) {
+  .brochureList section .tabBox aside ul li button {
+    font-size: 1.3125rem;
+    text-align: left;
+  }
+}
+.brochureList section .tabBox aside ul li.active button {
+  color: #2C2D91;
+}
+@media screen and (min-width: 1001px) {
+  .brochureList section .tabBox .contentBox {
+    width: calc(100% - 310px);
+  }
+}/*# sourceMappingURL=news.css.map */

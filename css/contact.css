@@ -1,0 +1,283 @@
+.contact .mainBox {
+  padding-bottom: 0;
+}
+.contact .container .blockTitle {
+  font-size: 1.75rem;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .contact .container .blockTitle {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact .container .blockTitle {
+    font-size: 1.25rem;
+  }
+}
+.contact .container .info {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px;
+}
+.contact .inquiryBox {
+  max-width: 990px;
+  margin: 0 auto 50px;
+  display: flex;
+  align-items: center;
+  border: #5052AD 1px solid;
+  position: relative;
+}
+.contact .inquiryBox .title {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 1.125rem;
+  color: #FFF;
+  background: #5052AD;
+}
+@media screen and (max-width: 767px) {
+  .contact .inquiryBox .title {
+    font-size: 1rem;
+  }
+}
+.contact .inquiryBox .item {
+  font-size: 1.75rem;
+  font-weight: 900;
+  padding: 0 80px 0 20px;
+}
+@media screen and (max-width: 1000px) {
+  .contact .inquiryBox .item {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact .inquiryBox .item {
+    font-size: 1.25rem;
+  }
+}
+.contact .inquiryBox .item span {
+  color: #5052AD;
+}
+.contact .inquiryBox .del {
+  color: transparent;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  width: 30px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  border: #5052AD 2px solid;
+}
+.contact .inquiryBox .del::after, .contact .inquiryBox .del::before {
+  content: "";
+  width: 12px;
+  height: 2px;
+  background: #5052AD;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.contact .inquiryBox .del::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.contact .inquiryBox .del::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.contact .formBox {
+  max-width: 990px;
+  margin: 0 auto 10%;
+}
+.contact .formBox .inputItem {
+  flex-wrap: wrap;
+}
+.contact .formBox .inputItem label {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.contact .bottomBox {
+  padding-top: 5%;
+  padding-bottom: 10%;
+  background: url("../images/in/contact_bg.jpg") center top no-repeat;
+  background-size: contain;
+}
+.contact .bottomBox .blockTitle {
+  font-size: 1.75rem;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1000px) {
+  .contact .bottomBox .blockTitle {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact .bottomBox .blockTitle {
+    font-size: 1.25rem;
+  }
+}
+.contact .bottomBox ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 5%;
+}
+@media screen and (max-width: 1000px) {
+  .contact .bottomBox ul {
+    flex-direction: column;
+  }
+}
+.contact .bottomBox ul li {
+  font-size: 1.3125rem;
+  border: #DDDDDD 1px solid;
+  padding: 20px;
+  width: 370px;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  .contact .bottomBox ul li {
+    width: 100%;
+    font-size: 1.125rem;
+  }
+}
+.contact .bottomBox .listBox {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+@media screen and (max-width: 1000px) {
+  .contact .bottomBox .listBox {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.contact .bottomBox .listBox .item {
+  width: calc((100% - 50px) / 2);
+}
+@media screen and (max-width: 1000px) {
+  .contact .bottomBox .listBox .item {
+    width: 100%;
+  }
+}
+.contact .bottomBox .listBox .item .map {
+  line-height: 0;
+}
+.contact .bottomBox .listBox .item iframe {
+  width: 100%;
+  filter: grayscale(1);
+}
+.contact .bottomBox .listBox .item .info {
+  margin-right: 25%;
+  transform: translateY(-45px);
+}
+@media screen and (max-width: 1000px) {
+  .contact .bottomBox .listBox .item .info {
+    margin: 0;
+  }
+}
+.contact .bottomBox .listBox .item .title {
+  text-align: left;
+  background: #2D2F91;
+  color: #FFF;
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .contact .bottomBox .listBox .item .title {
+    font-size: 1.375rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact .bottomBox .listBox .item .title {
+    font-size: 1.25rem;
+  }
+}
+.contact .bottomBox .listBox .item .title::before {
+  content: "";
+  width: 1px;
+  height: 40px;
+  display: block;
+  background: #FFF;
+  order: 2;
+  margin: 0 20px 0 auto;
+  opacity: 0.6;
+}
+.contact .bottomBox .listBox .item .title::after {
+  content: "";
+  width: 18px;
+  height: 28px;
+  -webkit-mask: url("../images/icon/icon_location.svg") center right no-repeat;
+          mask: url("../images/icon/icon_location.svg") center right no-repeat;
+  background: #FFF;
+  display: block;
+  order: 3;
+  margin: 0 0 0 15px;
+}
+.contact .bottomBox .listBox .item .address {
+  color: #444444;
+  font-size: 1.125rem;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .contact .bottomBox .listBox .item .address {
+    font-size: 1rem;
+  }
+}
+
+.contactOk .mainBox {
+  text-align: center;
+}
+.contactOk .mainBox .title {
+  max-width: 570px;
+  margin: 0 auto;
+  line-height: 1.2;
+  font-size: 3rem;
+  margin-bottom: clamp(20px, 5%, 50px);
+}
+@media screen and (max-width: 1000px) {
+  .contactOk .mainBox .title {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contactOk .mainBox .title {
+    font-size: 1.5rem;
+  }
+}
+.contactOk .mainBox .txt {
+  color: #333333;
+  font-size: 1.125rem;
+}
+@media screen and (max-width: 1000px) {
+  .contactOk .mainBox .txt {
+    font-size: 1rem;
+  }
+}
+.contactOk .mainBox .subTitle {
+  color: #2D2F91;
+  font-weight: 500;
+  font-size: 1.75rem;
+  margin-bottom: clamp(20px, 5%, 50px);
+}
+@media screen and (max-width: 1000px) {
+  .contactOk .mainBox .subTitle {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contactOk .mainBox .subTitle {
+    font-size: 1.25rem;
+  }
+}/*# sourceMappingURL=contact.css.map */
