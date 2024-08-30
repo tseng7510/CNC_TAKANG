@@ -62,13 +62,13 @@
 
                 <?php for ($i = 0; $i < 6; $i++) { ?>
                   <div class="item wow fadeInUp" data-wow-delay="0s">
-                    <a href="https://www.youtube.com/embed/84DA3W9Y4bw?si=7cN7rJKlodiW8RU_" class="lightBoxBtn">
+                    <button class="lightBoxBtn">
                       <div class="pic"><img src="../images/in/video.jpg" alt=""></div>
                       <div class="info">
                         <h2 class="title">DCM AHC</h2>
                         <div class="more">VIEW VIDEO</div>
                       </div>
-                    </a>
+                    </button>
                   </div>
                 <?php } ?>
 
@@ -98,12 +98,17 @@
   </div>
 
 
-  <div class="lightBoxOut">
+  <div class="lightBoxOut videoLightBox">
     <div class="lightBox">
       <button class="lightBoxClose" type="button">Close</button>
-      <div class="videoBox">
-        <div class="video-container"><iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-      </div>
+      <?php for ($i = 0; $i < 3; $i++) { ?>
+        <div class="videoBox">
+          <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/KJAFT9dNr3U?si=tkv1M7OfrFFxMAB3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        </div>
+        <div class="videoBox">
+          <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/KJAFT9dNr3U?si=tkv1M7OfrFFxMAB3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        </div>
+      <?php } ?>
     </div>
   </div>
 
@@ -117,18 +122,21 @@
       let lightBoxBtn = document.querySelectorAll('.lightBoxBtn');
       let body = document.querySelector('body');
       let lightBoxCloseBtn = document.querySelector('.lightBoxClose');
+      let lightContent = document.querySelectorAll('.lightBox .videoBox');
 
-      lightBoxBtn.forEach((value, index, array) => {
+      lightBoxBtn.forEach((value, index) => {
         value.addEventListener('click', function(e) {
           e.preventDefault();
           body.classList.add('lightBoxActive');
-          let videoSrc = $(this).attr('href');
-          $('.lightBox .video-container iframe').attr('src', videoSrc);
+          lightContent[index].classList.add('active');
         });
       })
 
       lightBoxCloseBtn.addEventListener('click', function(e) {
         body.classList.remove('lightBoxActive');
+        lightContent.forEach((value, index) => {
+          value.classList.remove('active');
+        })
       });
     })
   </script>

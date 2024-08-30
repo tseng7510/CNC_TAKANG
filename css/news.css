@@ -5,7 +5,7 @@
 .newsList section .listBox .item {
   width: 33.3333333333%;
   position: relative;
-  border: #DDDDDD 1px solid;
+  border: #dddddd 1px solid;
   margin: -1px 0 0 -1px;
   isolation: isolate;
 }
@@ -20,7 +20,7 @@
   }
 }
 .newsList section .listBox .item::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgb(45, 47, 145) 0%, rgb(80, 82, 173) 100%);
@@ -36,10 +36,10 @@
   transform: translateY(-40px);
 }
 .newsList section .listBox .item:hover .info .title {
-  color: #FFF;
+  color: #fff;
 }
 .newsList section .listBox .item:hover .info .description {
-  color: #D7D8EB;
+  color: #d7d8eb;
 }
 .newsList section .listBox .item:hover .more {
   display: block;
@@ -96,9 +96,9 @@
 }
 .newsList section .more {
   font-size: 0.9375rem;
-  color: #ECECF7;
+  color: #ececf7;
   padding: 10px 30px;
-  border: #ECECF7 1px solid;
+  border: #ececf7 1px solid;
   display: block;
   display: flex;
   justify-content: center;
@@ -113,7 +113,7 @@
 }
 
 .newsDetail .mainBox {
-  background: url("../images/in/news_bg.jpg") center bottom no-repeat;
+  background: url('../images/in/news_bg.jpg') center bottom no-repeat;
   background-size: cover;
 }
 .newsDetail section .container {
@@ -188,9 +188,13 @@
     width: 100%;
   }
 }
-.videoList section .listBox .item a {
+.videoList section .listBox .item .lightBoxBtn {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
   height: 100%;
 }
 .videoList section .listBox .item .pic {
@@ -198,16 +202,17 @@
   isolation: isolate;
 }
 .videoList section .listBox .item .pic::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   z-index: 2;
-  background: url("../images/in/video_top.png") center no-repeat;
+  background: url('../images/in/video_top.png') center no-repeat;
   display: block;
 }
 .videoList section .listBox .item .info {
+  width: calc(100% - 80px);
   margin: -20px 40px 0;
-  background: #FFF;
+  background: #fff;
   z-index: 9;
   position: relative;
   padding: 30px 35px 70px;
@@ -216,6 +221,7 @@
 }
 @media screen and (max-width: 1000px) {
   .videoList section .listBox .item .info {
+    width: calc(100% - 40px);
     margin: -20px 20px 0;
   }
 }
@@ -227,30 +233,30 @@
   right: 0;
   bottom: 0;
   padding: 10px 20px;
-  color: #2D2F91;
-  background: #EDEDF7;
+  color: #2d2f91;
+  background: #ededf7;
   display: flex;
   align-items: center;
   transition: all 0.3s ease;
 }
 .videoList section .listBox .item .info .more::after {
-  content: "";
+  content: '';
   width: 18px;
   height: 18px;
   display: block;
-  -webkit-mask: url("../images/icon/icon_more.svg") center no-repeat;
-          mask: url("../images/icon/icon_more.svg") center no-repeat;
-  background: #2D2F91;
+  -webkit-mask: url('../images/icon/icon_more.svg') center no-repeat;
+  mask: url('../images/icon/icon_more.svg') center no-repeat;
+  background: #2d2f91;
   opacity: 0.5;
   margin: 0 0 0 10px;
   transition: all 0.3s ease;
 }
 .videoList section .listBox .item:hover .more {
-  color: #FFF;
-  background: #2D2F91;
+  color: #fff;
+  background: #2d2f91;
 }
 .videoList section .listBox .item:hover .more::after {
-  background: #FFF;
+  background: #fff;
 }
 .videoList section .lightBox .videoBox {
   width: 100%;
@@ -259,12 +265,18 @@
 .videoList section .lightBox iframe {
   width: 100%;
 }
+.videoLightBox .videoBox {
+  display: none;
+}
+.videoLightBox .videoBox.active {
+  display: block;
+}
 
 .brochureList .mainBox {
   padding-bottom: 0;
 }
 .brochureList .mainBox::before {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   display: block;
@@ -272,7 +284,7 @@
   right: 0;
   top: 60%;
   bottom: 0;
-  background: #EDEDF7;
+  background: #ededf7;
 }
 .brochureList section .contentBox {
   isolation: isolate;
@@ -303,10 +315,10 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   position: relative;
   isolation: isolate;
-  background: #FFF;
+  background: #fff;
 }
 .brochureList section .listBox .item::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgb(45, 47, 145) 0%, rgb(80, 82, 173) 100%);
@@ -322,7 +334,8 @@
 .brochureList section .listBox .item:hover::before {
   opacity: 1;
 }
-.brochureList section .listBox .item:hover .pic::before, .brochureList section .listBox .item:hover .pic::after {
+.brochureList section .listBox .item:hover .pic::before,
+.brochureList section .listBox .item:hover .pic::after {
   opacity: 1;
 }
 .brochureList section .listBox .item:hover .pic img {
@@ -330,20 +343,20 @@
 }
 .brochureList section .listBox .item:hover .title {
   border-top: rgba(255, 255, 255, 0.3) 1px solid;
-  color: #FFF;
+  color: #fff;
 }
 .brochureList section .listBox .pic {
   position: relative;
   margin-bottom: 25px;
 }
 .brochureList section .listBox .pic::before {
-  content: "";
+  content: '';
   width: 30px;
   aspect-ratio: 1;
   display: block;
-  -webkit-mask: url("../images/icon/icon_download.svg") center no-repeat;
-          mask: url("../images/icon/icon_download.svg") center no-repeat;
-  background: #FFF;
+  -webkit-mask: url('../images/icon/icon_download.svg') center no-repeat;
+  mask: url('../images/icon/icon_download.svg') center no-repeat;
+  background: #fff;
   z-index: 10;
   top: 50%;
   left: 50%;
@@ -353,7 +366,7 @@
   opacity: 0;
 }
 .brochureList section .listBox .pic::after {
-  content: "";
+  content: '';
   width: 30%;
   aspect-ratio: 1;
   background: rgba(45, 47, 145, 0.9);
@@ -393,7 +406,7 @@
   }
 }
 .brochureList section .tabBox aside {
-  background: #FFF;
+  background: #fff;
   position: relative;
   z-index: 9;
 }
@@ -411,7 +424,7 @@
   font-weight: 700;
   color: #fff;
   display: block;
-  background: #2C2D91;
+  background: #2c2d91;
   display: none;
   line-height: 1.75;
   cursor: pointer;
@@ -424,7 +437,7 @@
   }
 }
 .brochureList section .tabBox aside > button::after {
-  content: "";
+  content: '';
   width: 12px;
   height: 12px;
   border: 2px solid #fff;
@@ -433,7 +446,7 @@
 }
 .brochureList section .tabBox aside ul {
   display: none;
-  border: #DDDDDD 1px solid;
+  border: #dddddd 1px solid;
 }
 @media screen and (min-width: 1001px) {
   .brochureList section .tabBox aside ul {
@@ -458,10 +471,10 @@
   }
 }
 .brochureList section .tabBox aside ul li.active button {
-  color: #2C2D91;
+  color: #2c2d91;
 }
 @media screen and (min-width: 1001px) {
   .brochureList section .tabBox .contentBox {
     width: calc(100% - 310px);
   }
-}/*# sourceMappingURL=news.css.map */
+} /*# sourceMappingURL=news.css.map */
