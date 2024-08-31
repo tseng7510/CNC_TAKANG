@@ -67,7 +67,13 @@
                 Versatility: Adapt to a wide range of applications with flexible tooling and customizable options.<br />
                 Reliability: Benefit from robust construction and dependable operation.<br /><br />
 
-                Invest in the Flat Bed CNC Lathe from CNC TAKANG and elevate your machining capabilities to new heights. Contact us today to learn more and discover how our innovative solutions can transform your manufacturing process.</div>
+                Invest in the Flat Bed CNC Lathe from CNC TAKANG and elevate your machining capabilities to new heights. Contact us today to learn more and discover how our innovative solutions can transform your manufacturing process.
+                <ul>
+                  <li>a</li>
+                  <li>a</li>
+                  <li>a</li>
+                </ul>
+              </div>
               <div class="content">
                 <div class="secTab">
                   <div class="conMenu">

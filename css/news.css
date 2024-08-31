@@ -381,6 +381,7 @@
 }
 .brochureList section .listBox .pic img {
   transition: all 0.3s ease;
+  aspect-ratio: 5 / 7;
 }
 .brochureList section .listBox .title {
   border-top: rgba(80, 82, 173, 0.3) 1px solid;
