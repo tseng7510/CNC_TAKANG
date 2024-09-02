@@ -381,6 +381,7 @@
 }
 .brochureList section .listBox .pic img {
   transition: all 0.3s ease;
+  max-width: 330px;
   aspect-ratio: 5 / 7;
 }
 .brochureList section .listBox .title {
